@@ -46,7 +46,7 @@ test:
 
 about:
   home: https://symbolixau.github.io/colourvalues/
-  license: GPL-3
+  license: GPL-3.0-only
   summary: "Maps one of the viridis colour palettes, or a user-specified palette to values. Viridis
     colour maps are created by St\xE9fan van der Walt and Nathaniel Smith, and were
     set as the default palette for the 'Python' 'Matplotlib' library <https://matplotlib.org/>.
