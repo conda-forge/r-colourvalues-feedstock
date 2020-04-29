@@ -1,4 +1,4 @@
-{% set version = '0.3.4' %}
+{% set version = "0.3.5" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,11 +10,11 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/colourvalues_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/colourvalues/colourvalues_{{ version }}.tar.gz
-  sha256: 7ea4027fa735cdbe68863bb547b33edfe5d625bc30d611dc342d42d4f988b62c
+  sha256: d91a8d8226d634a53a16f47a917a950547a39a2f134ac38d75f1300700bb43d6
 
 build:
-  merge_build_host: True  # [win]
-  number: 1
+  merge_build_host: true  # [win]
+  number: 0
   rpaths:
     - lib/R/lib/
     - lib/
@@ -25,18 +25,18 @@ requirements:
     - {{ compiler('m2w64_c') }}        # [win]
     - {{ compiler('cxx') }}            # [not win]
     - {{ compiler('m2w64_cxx') }}      # [win]
-    - {{posix}}filesystem        # [win]
-    - {{posix}}make
-    - {{posix}}sed               # [win]
-    - {{posix}}coreutils         # [win]
-    - {{posix}}zip               # [win]
+    - {{ posix }}filesystem        # [win]
+    - {{ posix }}make
+    - {{ posix }}sed               # [win]
+    - {{ posix }}coreutils         # [win]
+    - {{ posix }}zip               # [win]
   host:
     - r-base
     - r-bh >=1.72.0_3
     - r-rcpp
   run:
     - r-base
-    - {{native}}gcc-libs         # [win]
+    - {{ native }}gcc-libs         # [win]
     - r-rcpp
 
 test:
@@ -47,14 +47,11 @@ test:
 about:
   home: https://symbolixau.github.io/colourvalues/
   license: GPL-3.0-only
-  summary: "Maps one of the viridis colour palettes, or a user-specified palette to values. Viridis
-    colour maps are created by St\xE9fan van der Walt and Nathaniel Smith, and were
-    set as the default palette for the 'Python' 'Matplotlib' library <https://matplotlib.org/>.
-    Other palettes available in this library have been derived from 'RColorBrewer' <https://CRAN.R-project.org/package=RColorBrewer>
-    and 'colorspace' <https://CRAN.R-project.org/package=colorspace> packages."
+  summary: Maps one of the viridis colour palettes, or a user-specified palette to values. Viridis colour maps are created by Stéfan van der Walt and Nathaniel Smith, and were set as the default palette for the 'Python' 'Matplotlib' library <https://matplotlib.org/>. Other palettes available in this library have been derived
+    from 'RColorBrewer' <https://CRAN.R-project.org/package=RColorBrewer> and 'colorspace' <https://CRAN.R-project.org/package=colorspace> packages.
   license_family: GPL3
   license_file:
-    - '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3'
+    - {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3
 
 extra:
   recipe-maintainers:
