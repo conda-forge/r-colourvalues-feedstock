@@ -1,11 +1,22 @@
+About r-colourvalues-feedstock
+==============================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-colourvalues-feedstock/blob/main/LICENSE.txt)
+
 About r-colourvalues
-====================
+--------------------
 
 Home: https://symbolixau.github.io/colourvalues/
 
 Package license: GPL-3.0-only
 
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-colourvalues-feedstock/blob/main/LICENSE.txt)
+Summary: Maps one of the viridis colour palettes, or a user-specified palette to values. Viridis colour maps are created by Stéfan van der Walt and Nathaniel Smith, and were set as the default palette for the 'Python' 'Matplotlib' library <https://matplotlib.org/>. Other palettes available in this library have been derived from 'RColorBrewer' <https://CRAN.R-project.org/package=RColorBrewer> and 'colorspace' <https://CRAN.R-project.org/package=colorspace> packages.
+About r-colourvalues
+--------------------
+
+Home: https://symbolixau.github.io/colourvalues/
+
+Package license: GPL-3.0-only
 
 Summary: Maps one of the viridis colour palettes, or a user-specified palette to values. Viridis colour maps are created by Stéfan van der Walt and Nathaniel Smith, and were set as the default palette for the 'Python' 'Matplotlib' library <https://matplotlib.org/>. Other palettes available in this library have been derived from 'RColorBrewer' <https://CRAN.R-project.org/package=RColorBrewer> and 'colorspace' <https://CRAN.R-project.org/package=colorspace> packages.
 

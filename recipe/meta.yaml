@@ -1,4 +1,4 @@
-{% set version = "0.3.8" %}
+{% set version = "0.3.9" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,7 +10,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/colourvalues_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/colourvalues/colourvalues_{{ version }}.tar.gz
-  sha256: d4f1b092dd7a77e6def82e459dc96b98286e4555046521980739de45ded56a14
+  sha256: 36261277a88f8f9e759f69277ea73ba4ea8ab715a1e9f4e57209c43ee4dc395f
 
 build:
   merge_build_host: true  # [win]
