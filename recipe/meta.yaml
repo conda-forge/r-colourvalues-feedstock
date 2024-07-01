@@ -1,6 +1,5 @@
 {% set version = "0.3.9" %}
 {% set posix = 'm2-' if win else '' %}
-{% set native = 'm2w64-' if win else '' %}
 
 package:
   name: r-colourvalues
@@ -13,8 +12,7 @@ source:
   sha256: 36261277a88f8f9e759f69277ea73ba4ea8ab715a1e9f4e57209c43ee4dc395f
 
 build:
-  merge_build_host: true  # [win]
-  number: 1
+  number: 2
   rpaths:
     - lib/R/lib/
     - lib/
@@ -22,7 +20,9 @@ build:
 requirements:
   build:
     - {{ compiler('c') }}              # [not win]
+    - {{ stdlib("c") }}                # [not win]
     - {{ compiler('m2w64_c') }}        # [win]
+    - {{ stdlib("m2w64_c") }}          # [win]
     - {{ compiler('cxx') }}            # [not win]
     - {{ compiler('m2w64_cxx') }}      # [win]
     - {{ posix }}filesystem        # [win]
@@ -36,7 +36,6 @@ requirements:
     - r-rcpp
   run:
     - r-base
-    - {{ native }}gcc-libs         # [win]
     - r-rcpp
 
 test:
